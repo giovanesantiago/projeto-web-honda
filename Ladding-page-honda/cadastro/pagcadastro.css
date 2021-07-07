@@ -8,3 +8,72 @@
 body{
     background-color: rgb(255, 85, 85);
 }
+
+.area-cadastro{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.image-honda{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    
+}
+.cx{
+    margin-top: 15px;
+}
+
+.titulo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.788);
+}
+
+.cliente{
+    position: relative;
+}
+
+input{
+    width: 100%;
+    padding: 5px;
+    border-radius: 6px;
+    color: #181818;
+    outline: none;
+    border: 2px solid #181818;
+}
+span{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    right: 20px;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    font-weight: 500;
+    font-family: sans-serif;
+    transition: .4s;
+    color: #181818;
+}
+
+input:focus{
+    border: none;
+    outline: 2px solid #181818;
+}
+
+input:focus + span,
+input:valid + span{
+    top: -12px;
+    font-size: 15px;
+    padding: 0 10px;
+    background: #fff;
+}
