@@ -55,7 +55,6 @@ span{
     position: absolute;
     top: 5px;
     left: 20px;
-    right: 20px;
     font-size: 18px;
     letter-spacing: 0.1em;
     pointer-events: none;
@@ -63,6 +62,7 @@ span{
     font-family: sans-serif;
     transition: .4s;
     color: #181818;
+    background-color: #fff;
 }
 
 input:focus{
@@ -74,6 +74,44 @@ input:focus + span,
 input:valid + span{
     top: -12px;
     font-size: 15px;
-    padding: 0 10px;
+    padding: 0 1px;
     background: #fff;
+}
+
+#data{
+    padding-left: 17px;
+    width: 95%;
+}
+
+.titulo2{
+    text-align: left;
+    text-align: justify;
+}
+
+@media screen and (min-width: 600px) {
+    .data-rg{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .rg{
+        width: 300px;
+    }
+    .lado{
+        font-size: .8em;
+        text-align: center;
+        left: 8px;
+        top: 8px;  
+    }
+    #data:focus{
+        border: none;
+        outline: 2px solid #181818;
+    }
+    #data:focus + span,
+    #data:valid + span{
+    top: -12px;
+    font-size: .8em;
+    padding: 0 1px;
+    background: #fff;
+}
 }
