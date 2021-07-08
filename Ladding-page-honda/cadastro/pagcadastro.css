@@ -15,6 +15,7 @@ body{
     margin: auto;
     border-radius: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 20px;
 }
 
@@ -88,13 +89,33 @@ input:valid + span{
     text-align: justify;
 }
 
-@media screen and (min-width: 600px) {
-    .data-rg{
+.numero{
+    text-align: left;
+}
+
+#numero{
+    width: 40%;
+    
+}
+
+.Complemento{
+    width: 160%;
+}
+
+@media screen and (max-width: 600px) {
+    .numero{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
     }
-    .rg{
+}
+@media screen and (min-width: 600px) {
+    .duplo{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .cpf,.rg,.rua{
         width: 300px;
     }
     .lado{
@@ -113,5 +134,16 @@ input:valid + span{
     font-size: .8em;
     padding: 0 1px;
     background: #fff;
-}
+    }
+    .triplo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }    
+    
+    .cx2{
+        margin-right: 50px;
+        width: 30%;
+    }
+
 }
