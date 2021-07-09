@@ -98,25 +98,31 @@ input:valid + span{
     
 }
 
+.ddd{
+    width: 10%;
+}
+
+
 .Complemento{
     width: 160%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) { 
     .numero{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
     }
+    
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) { 
     .duplo{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
     }
     .cpf,.rg,.rua{
-        width: 300px;
+        width: 65%;
     }
     .lado{
         font-size: .8em;
@@ -139,11 +145,22 @@ input:valid + span{
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }    
+    }  
     
     .cx2{
         margin-right: 50px;
         width: 30%;
     }
+    .triplo2{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }  
 
+}
+
+@media screen and (min-width: 1000px) {
+    .rua{
+        width: 75%;
+    }
 }

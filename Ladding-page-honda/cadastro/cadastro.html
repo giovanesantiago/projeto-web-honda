@@ -9,47 +9,59 @@
 
 </head>
 <body>
-    <header>
+    <header> <!--Topo-->
         <div>
-            <div class="image-honda">
+            <!--Logo a cima da area de cadastro-->
+            <div class="image-honda"> 
                 <img src="img/logo_consorciohonda_color.png" width="50%">
             </div>
         </div>
     </header>
     <main>
-        <div class="container">
+        <!--Titulo da proposta-->
+        <div class="container"> 
             <h2 class="titulo">Cadastro de Proposta</h2>
         </div>
+        <!--area de cadastro  dados pessoais-->
         <div class="area-cadastro">
             <div class="container">
                 <h4 class="titulo2">Dados Pessoais:</h4>
+                <!--Nome-->
                 <div class="cx cliente">
                     <input type="text" required>
                     <span>Nome Completo</span>
                 </div>
+                <!--Mae-->
                 <div class="cx cliente">
                     <input type="text" required>
                     <span>Nome da Mãe</span>
                 </div>
+                <!--Pai-->
                 <div class="cx cliente">
                     <input type="text" required>
                     <span>Nome da Pai</span>
                 </div>
+                <!--Area dupla versão web cpf/data de nasc-->
                 <div class="container duplo">
+                    <!--cpf-->
                     <div class="cpf cx cliente">
                         <input id="cpf" type="number" required>
                         <span>CPF</span>
                     </div>
+                    <!--Data de Nascimento-->
                     <div class="data cx cliente">
                         <input id="data" type="date" required>
                         <span class="lado">Data de Nascimento</span>
                     </div>
                 </div>
+                <!--Area dupla versão web Rg/ data de emissão-->
                 <div class="container duplo">
+                    <!--rg-->
                     <div class="rg cx cliente">
                         <input id="rg" type="number" required>
                         <span>RG</span>
                     </div>
+                    <!--emissão-->
                     <div class="data cx cliente">
                         <input id="data" type="date" required>
                         <span class="lado">Data de Emissão(rg)</span>
@@ -57,45 +69,72 @@
                 </div>
             </div>
         </div>
+        <!--are de cadasto Endereço-->
         <div class="area-cadastro">
             <div class="container">
-                <h4 class="titulo2">Endenreço:</h4>
+                <h4 class="titulo2">Endereço:</h4>
+                <!--Area dupla versão web cep / rua-->
                 <div class="container duplo">
+                    <!--cep-->
                     <div class="cep cx cliente">
                         <input id="cep" type="number" required>
                         <span>CEP</span>
                     </div>
+                    <!--rua-->
                     <div class="rua cx cliente">
                         <input type="number" required>
                         <span class="lado">Rua</span>
                     </div>
                 </div>
+                <!--Area dupla web e mobile Nº / complemento-->
                 <div class="container duplo numero">
+                    <!--Numero-->
                     <div class="numero cx cliente">
                         <input id="numero" type="number" required>
                         <span class="lado">Nº</span>
                     </div>
+                    <!--Complemento-->
                     <div class="Complemento cx cliente">
                         <input type="number" required>
                         <span class="lado">Complemento</span>
                     </div>
                 </div>
+                <!--Area tripla versão web Barrio / cidade / estado -->
                 <div class="container triplo">
+                    <!--Barrio-->
                     <div class="bairro cx cx2 cliente">
-                        <input id="bairro" type="number" required>
+                        <input id="bairro" type="text" required>
                         <span class="lado">Bairro</span>
                     </div>
+                    <!--Cidade-->
                     <div class="cidade cx cx2 cliente">
-                        <input type="number" required>
+                        <input type="text" required>
                         <span class="lado">Cidade</span>
                     </div>
-                    <div class="rua cx cx2 cliente">
-                        <input type="number" required>
+                    <!--estado-->
+                    <div class="estado cx cx2 cliente">
+                        <input type="text" required>
                         <span class="lado">Estado</span>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+        <!--Contatos-->
+        <div class="area-cadastro">
+            <div class="container">
+                <h4 class="titulo2">Contato:</h4>
+                <!--Telefone / email-->
+                <div class="container duplo numero">
+                    <div class="ddd cx cliente">
+                        <input id="ddd" type="number" required>
+                        <span class="lado">DDD</span>
+                    </div>
+                    <div class="telefone cx cliente">
+                        <input id="telefone" type="number" required>
+                        <span class="lado">Tel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
