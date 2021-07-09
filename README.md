@@ -4,9 +4,15 @@
 
 
 
-- Pagina de Cadastro
+- Cadastro Proposta
 
-  ​	Pagina para cliente fazer os envio dos dados nescessario do castastro do consorcio.
+  Pagina para cliente fazer os envio dos dados nescessario do castastro do consorcio.
+
+  - Passos :
+    1. Pagina :ok:
+    2. Envio dos dados para email 
+
+  ​
 
 
 
