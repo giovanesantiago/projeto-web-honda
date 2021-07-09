@@ -123,18 +123,56 @@
         <div class="area-cadastro">
             <div class="container">
                 <h4 class="titulo2">Contato:</h4>
-                <!--Telefone / email-->
-                <div class="container duplo numero">
-                    <div class="ddd cx cliente">
-                        <input id="ddd" type="number" required>
-                        <span class="lado">DDD</span>
+                <!--Telefone / email do recado cuidado ao mexer -->
+                <div class="triplo">
+                    <!--ddd/telefone-->
+                    <div class="container duplo">
+                        <div class="container telefone">
+                            <!--ddd-->
+                            <div class="ddd cx cliente">
+                                <input id="ddd" type="number" required>
+                                <span class="lado pequeno">DDD</span>
+                            </div>
+                            <!--Telefone-->
+                            <div class="telefone cx cliente">
+                                <input id="telefone" type="number" required>
+                                <span class="lado">Telefone</span>
+                            </div>
+                        </div>
+                        <!--email-->
+                        <div class="email cx cliente ">
+                            <input id="email" type="text" required>
+                            <span class="lado">Email</span>
+                        </div>
                     </div>
-                    <div class="telefone cx cliente">
-                        <input id="telefone" type="number" required>
-                        <span class="lado">Tel</span>
+                </div>
+                <!--Telefone do contato-->
+                <div class="triplo">
+                    <div class="container duplo">
+                        <div class="container telefone">
+                            <!--ddd-->
+                            <div class="ddd cx cliente">
+                                <input id="ddd" type="number" required>
+                                <span class="lado pequeno">DDD</span>
+                            </div>
+                            <!--Telefone do recado-->
+                            <div class="telefone cx cliente">
+                                <input id="telefone" type="number" required>
+                                <span class="lado">Tel. Recado</span>
+                            </div>
+                        </div>
+                        <!--Nome do Recado-->
+                        <div class="email cx cliente ">
+                            <input id="email" type="text" required>
+                            <span class="lado">Nome do Recado</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="botao">
+            <a href="#" class="button8">Enviar Dados</a>
+        </div>
+    </main>    
 </body>
 </html>
