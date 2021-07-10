@@ -6,11 +6,11 @@
 }
 
 body{
-    background-color: white;
+    background-color: Black;
 }
 
 .area-cadastro{
-    background-color: rgba(202, 202, 202, 0.356);
+    background-color: white;
     width: 80%;
     margin: auto;
     border-radius: 10px;
@@ -37,7 +37,7 @@ body{
 
 .titulo{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgba(0, 0, 0, 0.788);
+    color: rgb(209, 209, 209);
 }
 
 .cliente{
@@ -124,6 +124,7 @@ input:valid + span{
     padding-top: 10px;
     width: 80%;
 }
+
 a.button8{
     display:inline-block;
     padding:0.2em 1.45em;
