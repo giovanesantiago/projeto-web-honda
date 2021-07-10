@@ -10,7 +10,8 @@
 
   - Passos :
     1. Pagina :ok:
-    2. Envio dos dados para email 
+    2. Validar entrada de dados
+    3. Envio dos dados para email 
 
   ​
 
