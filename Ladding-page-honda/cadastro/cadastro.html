@@ -33,19 +33,19 @@
                 </div>
                 <!--Mae-->
                 <div class="cx cliente">
-                    <input type="text" required>
+                    <input id="mae" type="text" onchange="validarMae()" required>
                     <span>Nome da Mãe</span>
                 </div>
                 <!--Pai-->
                 <div class="cx cliente">
-                    <input type="text" required>
+                    <input id="pai" type="text" onchange="validarPai()" required>
                     <span>Nome da Pai</span>
                 </div>
                 <!--Area dupla versão web cpf/data de nasc-->
                 <div class="container duplo">
                     <!--cpf-->
                     <div class="cpf cx cliente">
-                        <input id="cpf" type="number" required>
+                        <input id="cpf" type="text" onchange="validarCPF()" required>
                         <span>CPF</span>
                     </div>
                     <!--Data de Nascimento-->
@@ -58,7 +58,7 @@
                 <div class="container duplo">
                     <!--rg-->
                     <div class="rg cx cliente">
-                        <input id="rg" type="number" required>
+                        <input id="rg" type="number" onclick="validarNasc()" onchange="validarNasc()" required>
                         <span>RG</span>
                     </div>
                     <!--emissão-->
