@@ -83,6 +83,10 @@ input:valid + span{
     padding-left: 17px;
     width: 95%;
 }
+#emissao{
+    padding-left: 17px;
+    width: 95%;
+}
 
 .titulo2{
     text-align: left;
@@ -190,6 +194,17 @@ a.button8:active{
     }
     #data:focus + span,
     #data:valid + span{
+    top: -12px;
+    font-size: .8em;
+    padding: 0 1px;
+    background: #fff;
+    }
+    #emissao:focus{
+        border: none;
+        outline: 2px solid #181818;
+    }
+    #emissao:focus + span,
+    #emissao:valid + span{
     top: -12px;
     font-size: .8em;
     padding: 0 1px;

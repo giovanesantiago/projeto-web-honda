@@ -63,7 +63,7 @@
                     </div>
                     <!--emissão-->
                     <div class="data cx cliente">
-                        <input id="data" type="date" required>
+                        <input id="emissao" type="date" required>
                         <span class="lado">Data de Emissão(rg)</span>
                     </div>
                 </div>
@@ -76,8 +76,8 @@
                 <!--Area dupla versão web cep / rua-->
                 <div class="container duplo">
                     <!--cep-->
-                    <div class="cep cx cliente">
-                        <input id="cep" type="number" required>
+                    <div class="cep cx cliente" >
+                        <input id="cep" type="number" onchange="validarEmissao()" required>
                         <span>CEP</span>
                     </div>
                     <!--rua-->
@@ -170,8 +170,8 @@
                 </div>
             </div>
         </div>
-        <div class="botao">
-            <a href="#" class="button8" onclick="validar()">Enviar Dados</a>
+        <div class="botao" onclick="enviar()">
+            <a href="#" class="button8" >Enviar Dados</a>
         </div>
     </main>    
     <script src="validacao.js"></script>

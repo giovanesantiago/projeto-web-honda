@@ -135,9 +135,6 @@ function validarCPF() { //vALIDAR CPF
     //variaveis
     const cpfhtml = document.getElementById('cpf')
     const cpf = String(cpfhtml.value)
-    const cpfvalidoreceita = TestaCPF(cpf)  
-    
-
     //funçoes
     const cpfescrita = (cpf) => { //add simbolos
         const cpfsimbolos = cpf.slice(0, 3) + '.' + cpf.slice(3, 6) + '.' + cpf.slice(6, 9) + '-' + cpf.slice(9, 11)
@@ -163,15 +160,19 @@ function validarCPF() { //vALIDAR CPF
         if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
         return true;
     }
-    
+    const cpfvalidoreceita = TestaCPF(cpf) 
     // condiçoes
+    const naovalido = false
     if(!cpfvalidoreceita){
         alert('[error] - CPF INVALIDO, verifique : \n - Não use de Simbolos(. , - ...) \n - Digite so Numeros. \n - Confira se Digitou os numeros corretos.')
         cpfhtml.value = ' '
+        naovalido = true
     }else {
         cpfhtml.value = cpfescrita(cpf)
         return true
     }
+    
+        
     
 }
 function validarNasc() { //validar nascimento
@@ -196,5 +197,40 @@ function validarNasc() { //validar nascimento
         dataHTML.value = " "
     }else {
         return true
+    }
+}
+function validarEmissao() { // validando emissao
+    //variaveis
+    const emissaoHTML = document.getElementById('emissao')
+    const emissao = String(emissaoHTML.value)
+    const dataatual = new Date
+    const ano = Number(emissao.slice(0, 4))
+    const anoatual = dataatual.getFullYear()
+    if((anoatual-ano) > 10) {
+        alert('[error] - Data de amessão invalida, maior que 10 anos')
+    }else {
+        return true
+    }
+    
+}
+
+function enviar() { 
+    const validarnome = validarNome()
+    const validarmae = validarMae()
+    const validarpai = validarPai()
+    const validarcPF = validarCPF()
+    const validarnasc = validarNasc()
+    const validaremissao = validarEmissao()
+    
+    if(validarnome || validarmae || validarpai || validarcPF || validarnasc || validaremissao){
+        alert('ok')
+    }else {
+        alert(validarnome)
+        alert(validarmae)
+        alert(validarpai)
+        alert(validarcPF)
+        alert(validarnasc)
+        alert(validaremissao)
+    
     }
 }
