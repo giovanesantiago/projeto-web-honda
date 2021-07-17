@@ -187,6 +187,14 @@ function validarNasc() { //validar nascimento
         if((anoatual - ano) > 16) {
             alert('Menores de 18 e maiores que 16 - Condições especias de cadastro - ENTRE EM CONTATO COM SEU CONSULTOR')
             dataHTML.value = " "
-        }else()
+        }else{
+            alert('Menor de 16 anos não pode fazer consorcio - favor fazer com os dados de alguem maior de idade.')
+            dataHTML.value = " "
+        }
+    }else if((anoatual - ano) > 100) {
+        alert('[error] - Idade Invalida')
+        dataHTML.value = " "
+    }else {
+        return true
     }
 }
