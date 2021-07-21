@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="validacao.js"></script>
+    <script src="cep.js"></script>
     <link rel="stylesheet" href="pagcadastro.css">
     <title>Consorcio Honda</title>
 
@@ -74,49 +76,51 @@
             <div class="container">
                 <h4 class="titulo2">Endereço:</h4>
                 <!--Area dupla versão web cep / rua-->
-                <div class="container duplo">
-                    <!--cep-->
-                    <div class="cep cx cliente" >
-                        <input id="cep" type="number" onchange="validarEmissao()" required>
-                        <span>CEP</span>
+                <form method="get" action=".">
+                    <div class="container duplo">
+                        <!--cep-->
+                        <div class="cep cx cliente" >
+                            <input name="cep" id="cep" type="text" onchange="validarEmissao(), pesquisacep(this.value)"  required>
+                            <span>CEP</span>
+                        </div>
+                        <!--rua-->
+                        <div class="rua cx cliente">
+                            <input name="rua" id="rua" type="text" required>
+                            <span class="lado">Rua</span>
+                        </div>
                     </div>
-                    <!--rua-->
-                    <div class="rua cx cliente">
-                        <input type="number" required>
-                        <span class="lado">Rua</span>
+                    <!--Area dupla web e mobile Nº / complemento-->
+                    <div class="container duplo numero">
+                        <!--Numero-->
+                        <div class="numero cx cliente">
+                            <input id="numero" type="number" required>
+                            <span class="lado">Nº</span>
+                        </div>
+                        <!--Complemento-->
+                        <div class="Complemento cx cliente">
+                            <input id="Complemento" type="text" required>
+                            <span class="lado">Complemento</span>
+                        </div>
                     </div>
-                </div>
-                <!--Area dupla web e mobile Nº / complemento-->
-                <div class="container duplo numero">
-                    <!--Numero-->
-                    <div class="numero cx cliente">
-                        <input id="numero" type="number" required>
-                        <span class="lado">Nº</span>
+                    <!--Area tripla versão web Barrio / cidade / estado -->
+                    <div class="container triplo">
+                        <!--Barrio-->
+                        <div class="bairro cx cx2 cliente">
+                            <input name="bairro" id="bairro" type="text" required>
+                            <span class="lado">Bairro</span>
+                        </div>
+                        <!--Cidade-->
+                        <div class="cidade cx cx2 cliente">
+                            <input name="cidade" id="cidade" type="text" required>
+                            <span class="lado">Cidade</span>
+                        </div>
+                        <!--estado-->
+                        <div class="estado cx cx2 cliente">
+                            <input name="uf" id="uf" type="text" required>
+                            <span class="lado">Estado</span>
+                        </div>
                     </div>
-                    <!--Complemento-->
-                    <div class="Complemento cx cliente">
-                        <input type="number" required>
-                        <span class="lado">Complemento</span>
-                    </div>
-                </div>
-                <!--Area tripla versão web Barrio / cidade / estado -->
-                <div class="container triplo">
-                    <!--Barrio-->
-                    <div class="bairro cx cx2 cliente">
-                        <input id="bairro" type="text" required>
-                        <span class="lado">Bairro</span>
-                    </div>
-                    <!--Cidade-->
-                    <div class="cidade cx cx2 cliente">
-                        <input type="text" required>
-                        <span class="lado">Cidade</span>
-                    </div>
-                    <!--estado-->
-                    <div class="estado cx cx2 cliente">
-                        <input type="text" required>
-                        <span class="lado">Estado</span>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
         <!--Contatos-->
@@ -174,6 +178,5 @@
             <a href="#" class="button8" >Enviar Dados</a>
         </div>
     </main>    
-    <script src="validacao.js"></script>
 </body>
 </html>
