@@ -165,7 +165,7 @@ function validarCPF() { //vALIDAR CPF
     const naovalido = false
     if(!cpfvalidoreceita){
         alert('[error] - CPF INVALIDO, verifique : \n - Não use de Simbolos(. , - ...) \n - Digite so Numeros. \n - Confira se Digitou os numeros corretos.')
-        cpfhtml.value = ' '
+        cpfhtml.value = ''
         naovalido = true
     }else {
         cpfhtml.value = cpfescrita(cpf)
