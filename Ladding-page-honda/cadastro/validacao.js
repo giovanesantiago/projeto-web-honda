@@ -215,14 +215,7 @@ function validarEmissao() { // validando emissao
 }
 
 function enviar() { 
-    const validarnome = validarNome()
-    const validarmae = validarMae()
-    const validarpai = validarPai()
-    const validarcPF = validarCPF()
-    const validarnasc = validarNasc()
-    const validaremissao = validarEmissao()
-    
-    if(validarnome || validarmae || validarpai || validarcPF || validarnasc || validaremissao){
+    if(validarNome || validarMae || validarPai || validarCPF || validarNasc || validarEmissao || meu_callback){
         alert('ok')
     }else {
         alert(validarnome)

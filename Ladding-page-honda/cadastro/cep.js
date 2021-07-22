@@ -14,6 +14,7 @@ function meu_callback(conteudo) {
         document.getElementById('cidade').value=(conteudo.localidade);
         document.getElementById('uf').value=(conteudo.uf);
         
+        return true
     } //end if.
     else {
         //CEP não Encontrado.
