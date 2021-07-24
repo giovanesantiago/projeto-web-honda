@@ -31,13 +31,13 @@ function validarNome() { //Validar Nome Commpleto
     //Validações
     if (qnt <= 3) { // qnt de caracteres maior que 3
         alert('[error] - Nome incompleto.')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else if (temNumero){ // nao pode ter numero
         alert('[error] - Nao pode haver numeros.')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else if (!doisnome){ //nao pode ter menos de 2 nomes
         alert('[error] - Nome e sobrenome')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else { // validado
         return true
     }
@@ -75,13 +75,13 @@ function validarMae() { //Validar Nome Mae
     //Validações
     if (qnt <= 3) {
         alert('[error] - Nome incompleto.')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else if (temNumero){
         alert('[error] - Nao pode haver numeros.')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else if (!doisnome){
         alert('[error] - Nome e sobrenome')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else {
         return true
     }
@@ -119,13 +119,13 @@ function validarPai() { //Validar Nome pai
     //Validações
     if (qnt <= 3) {
         alert('[error] - Nome incompleto.')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else if (temNumero){
         alert('[error] - Nao pode haver numeros.')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else if (!doisnome){
         alert('[error] - Nome e sobrenome')
-        nomeV.value = ' '
+        nomeV.value = ''
     }else {
         return true
     }
@@ -199,31 +199,41 @@ function validarNasc() { //validar nascimento
         return true
     }
 }
-function validarEmissao() { // validando emissao
-    //variaveis
-    const emissaoHTML = document.getElementById('emissao')
-    const emissao = String(emissaoHTML.value)
-    const dataatual = new Date
-    const ano = Number(emissao.slice(0, 4))
-    const anoatual = dataatual.getFullYear()
-    if((anoatual-ano) > 10) {
-        alert('[error] - Data de amessão invalida, maior que 10 anos')
-    }else {
-        return true
+
+function enviar() {
+    const dados = [
+        '- ' + document.getElementById('nome').value + '\n',
+        'Pai: ' + document.getElementById('pai').value + '\n',
+        'Mae: ' + document.getElementById('mae').value + '\n',
+        'CPF: ' + document.getElementById('cpf').value + '\n',
+        'Nasc: ' + document.getElementById('data').value + '\n',
+        'RG: ' + document.getElementById('rg').value + '\n',
+        'Cep: ' + document.getElementById('cep').value + '\n',
+        'Rua: ' + document.getElementById('rua').value,
+        'Nº casa: ' + document.getElementById('numero').value,
+        'complemento: ' + document.getElementById('Complemento').value + '\n',
+        'Barrio: ' + document.getElementById('bairro').value,
+        'Cidade: ' + document.getElementById('cidade').value,
+        'Uf: ' + document.getElementById('uf').value + '\n',
+        'Telefone : (' + document.getElementById('ddd').value + ')' + document.getElementById('telefone').value + '\n',
+        'Email: ' + document.getElementById('email').value + '\n',
+        'Nome Recado: ' + document.getElementById('NomeRecado').value,
+        'Recado : (' + document.getElementById('ddd2').value + ')' + document.getElementById('telefonerec').value
+    ]
+    const dadosTXT = dados.join(' * ')
+    function sendMail(dados) {
+        var link = "mailto:propostas.clientes.g.w@gmail.com"
+                 + "?cc=jlalagang@gmail.com"
+                 + "&subject=" + encodeURIComponent("Proposta - " + dados[0])
+                 + "&body=" + encodeURIComponent(dados)
+        ;
+        
+        window.location.href = link;
     }
+
+    sendMail(dadosTXT)
+    alert('ok')
+
     
 }
 
-function enviar() { 
-    if(validarNome || validarMae || validarPai || validarCPF || validarNasc || validarEmissao || meu_callback){
-        alert('ok')
-    }else {
-        alert(validarnome)
-        alert(validarmae)
-        alert(validarpai)
-        alert(validarcPF)
-        alert(validarnasc)
-        alert(validaremissao)
-    
-    }
-}

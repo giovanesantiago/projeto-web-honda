@@ -65,8 +65,6 @@
                     </div>
                     <!--emissão-->
                     <div class="data cx cliente">
-                        <input id="emissao" type="date" required>
-                        <span class="lado">Data de Emissão(rg)</span>
                     </div>
                 </div>
             </div>
@@ -80,7 +78,7 @@
                     <div class="container duplo">
                         <!--cep-->
                         <div class="cep cx cliente" >
-                            <input name="cep" id="cep" type="text" onchange="validarEmissao(), pesquisacep(this.value)"  required>
+                            <input name="cep" id="cep" type="text" onchange="pesquisacep(this.value)"  required>
                             <span>CEP</span>
                         </div>
                         <!--rua-->
@@ -156,12 +154,12 @@
                         <div class="container telefone">
                             <!--ddd-->
                             <div class="ddd cx cliente">
-                                <input id="ddd" type="number" required>
+                                <input id="ddd2" type="number" required>
                                 <span class="lado pequeno">DDD</span>
                             </div>
                             <!--Telefone do recado-->
                             <div class="telefone cx cliente">
-                                <input id="telefone" type="number" required>
+                                <input id="telefonerec" type="number" required>
                                 <span class="lado">Tel. Recado</span>
                             </div>
                         </div>

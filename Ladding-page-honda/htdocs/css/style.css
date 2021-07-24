@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.menu {
+    background-color: blanchedalmond;
+}
+.video {
+   width: 100%;
+}
+@media screen and (min-width: 1000px){
+    .video{
+        height: 550px;
+        background-color: black;
+    }
+}
+
+.margin {
+    padding-top: 20px;
+}
+
+.caixas{
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px black;
+    background-color: #f21d2fc5;
+    font-weight: bolder;
+    padding: 5px;
+    margin-bottom: 15px;
+    
+}
+
+img.caixa2{
+    margin-top: 20px;
+    width: 40%;
+}
+img.caixa1{
+    margin-top: 10px;
+    width: 30%;
+    padding-bottom: 15px;
+}
+
+.descricao{
+    font-size: 1.2em;
+}
+
+.color{
+    color: black;
+}
+
+.center{
+    margin: auto;
+}
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="validacao.js"></script>
+    <script src="cep.js"></script>
+    <link rel="stylesheet" href="pagcadastro.css">
+    <title>Consorcio Honda</title>
+
+</head>
+<body>
+    <header> <!--Topo-->
+        <div>
+            <!--Logo a cima da area de cadastro-->
+            <div class="image-honda"> 
+                <img src="img/logo_consorciohonda_color.png" width="50%">
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--Titulo da proposta-->
+        <div class="container"> 
+            <h2 class="titulo">Cadastro de Proposta</h2>
+        </div>
+        <!--area de cadastro  dados pessoais-->
+        <div class="area-cadastro">
+            <div class="container">
+                <h4 class="titulo2">Dados Pessoais:</h4>
+                <!--Nome-->
+                <div class="cx cliente">
+                    <input id="nome" type="text" onchange="validarNome()" required>
+                    <span>Nome Completo</span>
+                </div>
+                <!--Mae-->
+                <div class="cx cliente">
+                    <input id="mae" type="text" onchange="validarMae()" required>
+                    <span>Nome da Mãe</span>
+                </div>
+                <!--Pai-->
+                <div class="cx cliente">
+                    <input id="pai" type="text" onchange="validarPai()" required>
+                    <span>Nome da Pai</span>
+                </div>
+                <!--Area dupla versão web cpf/data de nasc-->
+                <div class="container duplo">
+                    <!--cpf-->
+                    <div class="cpf cx cliente">
+                        <input id="cpf" type="text" onchange="validarCPF()" required>
+                        <span>CPF</span>
+                    </div>
+                    <!--Data de Nascimento-->
+                    <div class="data cx cliente">
+                        <input id="data" type="date" required>
+                        <span class="lado">Data de Nascimento</span>
+                    </div>
+                </div>
+                <!--Area dupla versão web Rg/ data de emissão-->
+                <div class="container duplo">
+                    <!--rg-->
+                    <div class="rg cx cliente">
+                        <input id="rg" type="number" onclick="validarNasc()" onchange="validarNasc()" required>
+                        <span>RG</span>
+                    </div>
+                    <!--emissão-->
+                    <div class="data cx cliente">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--are de cadasto Endereço-->
+        <div class="area-cadastro">
+            <div class="container">
+                <h4 class="titulo2">Endereço:</h4>
+                <!--Area dupla versão web cep / rua-->
+                <form method="get" action=".">
+                    <div class="container duplo">
+                        <!--cep-->
+                        <div class="cep cx cliente" >
+                            <input name="cep" id="cep" type="text" onchange="pesquisacep(this.value)"  required>
+                            <span>CEP</span>
+                        </div>
+                        <!--rua-->
+                        <div class="rua cx cliente">
+                            <input name="rua" id="rua" type="text" required>
+                            <span class="lado">Rua</span>
+                        </div>
+                    </div>
+                    <!--Area dupla web e mobile Nº / complemento-->
+                    <div class="container duplo numero">
+                        <!--Numero-->
+                        <div class="numero cx cliente">
+                            <input id="numero" type="number" required>
+                            <span class="lado">Nº</span>
+                        </div>
+                        <!--Complemento-->
+                        <div class="Complemento cx cliente">
+                            <input id="Complemento" type="text" required>
+                            <span class="lado">Complemento</span>
+                        </div>
+                    </div>
+                    <!--Area tripla versão web Barrio / cidade / estado -->
+                    <div class="container triplo">
+                        <!--Barrio-->
+                        <div class="bairro cx cx2 cliente">
+                            <input name="bairro" id="bairro" type="text" required>
+                            <span class="lado">Bairro</span>
+                        </div>
+                        <!--Cidade-->
+                        <div class="cidade cx cx2 cliente">
+                            <input name="cidade" id="cidade" type="text" required>
+                            <span class="lado">Cidade</span>
+                        </div>
+                        <!--estado-->
+                        <div class="estado cx cx2 cliente">
+                            <input name="uf" id="uf" type="text" required>
+                            <span class="lado">Estado</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Contatos-->
+        <div class="area-cadastro">
+            <div class="container">
+                <h4 class="titulo2">Contato:</h4>
+                <!--Telefone / email do recado cuidado ao mexer -->
+                <div class="triplo">
+                    <!--ddd/telefone-->
+                    <div class="container duplo">
+                        <div class="container telefone">
+                            <!--ddd-->
+                            <div class="ddd cx cliente">
+                                <input id="ddd" type="number" required>
+                                <span class="lado pequeno">DDD</span>
+                            </div>
+                            <!--Telefone-->
+                            <div class="telefone cx cliente">
+                                <input id="telefone" type="number" required>
+                                <span class="lado">Telefone</span>
+                            </div>
+                        </div>
+                        <!--email-->
+                        <div class="email cx cliente ">
+                            <input id="email" type="text" required>
+                            <span class="lado">Email</span>
+                        </div>
+                    </div>
+                </div>
+                <!--Telefone do contato-->
+                <div class="triplo">
+                    <div class="container duplo">
+                        <div class="container telefone">
+                            <!--ddd-->
+                            <div class="ddd cx cliente">
+                                <input id="ddd2" type="number" required>
+                                <span class="lado pequeno">DDD</span>
+                            </div>
+                            <!--Telefone do recado-->
+                            <div class="telefone cx cliente">
+                                <input id="telefonerec" type="number" required>
+                                <span class="lado">Tel. Recado</span>
+                            </div>
+                        </div>
+                        <!--Nome do Recado-->
+                        <div class="email cx cliente ">
+                            <input id="NomeRecado" type="text" required>
+                            <span class="lado">Nome do Recado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="botao" onclick="enviar()">
+            <a href="#" class="button8" >Enviar Dados</a>
+        </div>
+    </main>    
+</body>
+</html>
