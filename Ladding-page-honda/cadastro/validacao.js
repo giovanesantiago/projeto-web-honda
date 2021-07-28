@@ -1,35 +1,25 @@
+
 //validações
-function validarNome() { //Validar Nome Commpleto
+function validarNome(conteudo) { //Validar Nome Commpleto
     //variaveis
-    var nomeV = document.getElementById('nome') //Recebendo dado
-    var nome = String(nomeV.value) // adapitando leitura
-    qnt = Number(nome.length) // qnt de letras
-    var temNumero = temNumber(nome, qnt)
-    var doisnome = doisnome(nome)
+    const nome = conteudo // Recendo dados
+    var temNumero = false
+    var doisnome = false
     
-    //funções
-    function temNumber(nome, qnt) { //Se tem numero
-        const letras = nome.split('')
-        for(c = 0; c < qnt; c++) {
-            if ((parseInt(letras[c]) >= 0) || (parseInt(letras[c]) <= 0)){
-                return true
-                break
-            }
+    // confirindo se tem numero e nome e sobre nome
+    for (let value of nome) {
+        if(parseInt(value) >= 0) {
+            temNumero = true
+            break
+        }
+        if(value == ' ') {
+            doisnome = true
+            break
         }
     }
-    function doisnome(nome){ // se tem mais de um nome
-        const espaçoX = nome.replace(' ', 'x')
-        const lastname = espaçoX.split('x')
-        if (lastname.length >= 2) {
-            return true
-        }else {
-            return false
-        }
-    } 
-    
     
     //Validações
-    if (qnt <= 3) { // qnt de caracteres maior que 3
+    if (nome.length <= 3) { // qnt de caracteres maior que 3
         alert('[error] - Nome incompleto.')
         nomeV.value = ''
     }else if (temNumero){ // nao pode ter numero
@@ -43,90 +33,64 @@ function validarNome() { //Validar Nome Commpleto
     }
     
 }
-function validarMae() { //Validar Nome Mae
+function validarMae(conteudo) { //Validar Nome Mae
     //variaveis
-    var nomeV = document.getElementById('mae') //Recebendo dado
-    var nome = String(nomeV.value) // adapitando leitura
-    qnt = Number(nome.length) // qnt de letras
-    var temNumero = temNumber(nome, qnt)
-    var doisnome = doisnome(nome)
-    
-    //funções
-    function temNumber(nome, qnt) {
-        const letras = nome.split('')
-        for(c = 0; c < qnt; c++) {
-            if ((parseInt(letras[c]) >= 0) || (parseInt(letras[c]) <= 0)){
-                return true
-                break
-            }
+    const nome = conteudo // Recendo dados
+    var temNumero = false
+    var doisnome = false
+    // confirindo se tem numero 
+    for (let value of nome) {
+        if(parseInt(value) >= 0) {
+            temNumero = true
+            break
+        }
+        if(value == ' ') {
+            doisnome = true
+            break
         }
     }
-    function doisnome(nome){
-        const espaçoX = nome.replace(' ', 'x')
-        const lastname = espaçoX.split('x')
-        if (lastname.length >= 2) {
-            return true
-        }else {
-            return false
-        }
-    } 
-    
-    
     //Validações
-    if (qnt <= 3) {
+    if (nome.length <= 3) { // qnt de caracteres maior que 3
         alert('[error] - Nome incompleto.')
         nomeV.value = ''
-    }else if (temNumero){
+    }else if (temNumero){ // nao pode ter numero
         alert('[error] - Nao pode haver numeros.')
         nomeV.value = ''
-    }else if (!doisnome){
+    }else if (!doisnome){ //nao pode ter menos de 2 nomes
         alert('[error] - Nome e sobrenome')
         nomeV.value = ''
-    }else {
+    }else { // validado
         return true
     }
     
 }
-function validarPai() { //Validar Nome pai
+function validarPai(conteudo) { //Validar Nome pai
     //variaveis
-    var nomeV = document.getElementById('pai') //Recebendo dado
-    var nome = String(nomeV.value) // adapitando leitura
-    qnt = Number(nome.length) // qnt de letras
-    var temNumero = temNumber(nome, qnt)
-    var doisnome = doisnome(nome)
-    
-    //funções
-    function temNumber(nome, qnt) {
-        const letras = nome.split('')
-        for(c = 0; c < qnt; c++) {
-            if ((parseInt(letras[c]) >= 0) || (parseInt(letras[c]) <= 0)){
-                return true
-                break
-            }
+    const nome = conteudo // Recendo dados
+    var temNumero = false
+    var doisnome = false
+    // confirindo se tem numero 
+    for (let value of nome) {
+        if(parseInt(value) >= 0) {
+            temNumero = true
+            break
+        }
+        if(value == ' ') {
+            doisnome = true
+            break
         }
     }
-    function doisnome(nome){
-        const espaçoX = nome.replace(' ', 'x')
-        const lastname = espaçoX.split('x')
-        if (lastname.length >= 2) {
-            return true
-        }else {
-            return false
-        }
-    } 
-    
-    
     //Validações
-    if (qnt <= 3) {
+    if (nome.length <= 3) { // qnt de caracteres maior que 3
         alert('[error] - Nome incompleto.')
         nomeV.value = ''
-    }else if (temNumero){
+    }else if (temNumero){ // nao pode ter numero
         alert('[error] - Nao pode haver numeros.')
         nomeV.value = ''
-    }else if (!doisnome){
+    }else if (!doisnome){ //nao pode ter menos de 2 nomes
         alert('[error] - Nome e sobrenome')
         nomeV.value = ''
-    }else {
+    }else { // validado
         return true
     }
     
@@ -221,17 +185,7 @@ function enviar() {
         'Recado : (' + document.getElementById('ddd2').value + ')' + document.getElementById('telefonerec').value
     ]
     const dadosTXT = dados.join(' * ')
-    function sendMail(dados) {
-        var link = "mailto:propostas.clientes.g.w@gmail.com"
-                 + "?cc=jlalagang@gmail.com"
-                 + "&subject=" + encodeURIComponent("Proposta - " + dados[0])
-                 + "&body=" + encodeURIComponent(dados)
-        ;
-        
-        window.location.href = link;
-    }
-
-    sendMail(dadosTXT)
+    console.log(dadosTXT)
     alert('ok')
 
     
